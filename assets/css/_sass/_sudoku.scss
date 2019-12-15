@@ -1,0 +1,324 @@
+/* Sudoku Game: */
+
+// --------- Title: -----------------
+
+.sudoku-title {
+	text-align: center;
+}
+
+// --------- Game Shape: -------------
+
+// wrapper for whole game
+.sudoku-game-wrapper {
+	margin: 0 auto;
+	padding: 3rem 0;
+}
+
+// game-size square
+.sudoku__game-square {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1.5in 1.5in 1.5in;
+	grid-template-rows: 1.5in 1.5in 1.5in;
+	width: calc(1.5in * 3);
+	border: 1px solid black;
+}
+
+// square 1-9
+.sudoku-square__small {
+	position: relative;
+	display: grid;
+	grid-template-columns: .5in .5in .5in;
+	grid-template-rows: .5in .5in .5in;
+	border: 1px solid black;
+}
+
+// individual nums
+.sudoku__number-wrapper {
+	border: 1px solid purple;
+	display: grid;
+	height: .5in;
+	width: .5in;
+}
+
+.sudoku__number {
+	align-self: center;
+	justify-self: center;
+}
+
+// ----------- Rows: ----------------
+
+// applies to all 3 squares in this position, etc.
+.row--top {
+
+}
+
+.row--middle {
+
+}
+
+.row--bottom {
+
+}
+
+// ------------- Columns: ---------------
+
+.col--left {
+
+}
+
+.col--middle {
+
+}
+
+.col--right {
+
+}
+
+// ------------------------------
+
+
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small   {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small row--middle col--middle {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small row--middle col--right {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small  col--left {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small row--bottom col--middle {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku__number {
+
+}
+
+.sudoku-square__small {
+
+} 
+
+.row--bottom {
+
+} 
+
+.col--right {
+
+}
