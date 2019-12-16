@@ -16,6 +16,7 @@
 //            (NB: vars first b/c can't invoke b/f define)
 
 // vars:
+@import '_vars/atom-one-dark';
 @import '_vars/colors';
 @import '_vars/fonts';
 
@@ -25,4 +26,5 @@
 //@import '_layouts/general';
 
 // pages:
+@import '_pages/blog-post';
 @import '_pages/magic-kitties';
