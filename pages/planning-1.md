@@ -1,7 +1,7 @@
 ---
 title: Planning Document
 layout: no-style
-permalink: /planning/
+permalink: /planning-1/
 ---
 
 # Planning 1 
