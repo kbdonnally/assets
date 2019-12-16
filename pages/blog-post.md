@@ -4,6 +4,8 @@ layout: no-style
 permalink: /blog-post/
 ---
 
+<main class="blog-post-wrapper" markdown="1">
+
 # Big Title
 
 *Usage of syntax highlighting: [highlight.js](https://highlightjs.org/)*
@@ -43,3 +45,5 @@ Leela's gonna kill me. We're also Santa Claus! I'm just glad my fat, ugly mama i
 *From Doctor Who:*
 
 > Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.
+
+</main>
