@@ -1,12 +1,23 @@
 /* Fonts */
 
+/* Italics available unless noted otherwise.
+   Available weights provided in comments. */
+
 // Google:
-$muli: 'Muli', sans-serif;
+$muli: 	  'Muli', sans-serif;
 $poppins: 'Poppins', sans-serif;
 
 // Adobe:
-$paralucent: 'paralucent', sans-serif;
-$atrament: 'atrament-web', sans-serif;
-$source-sans: source-sans-pro, sans-serif;
-$futura: futura-pt, sans-serif;
-$futura-bold: futura-pt-bold, sans-serif;
+$covik-mono:  covik-sans-mono, sans-serif; // 400, 700
+$futura: 	  futura-pt, sans-serif; // 300, 400, 500, 700, 800
+$futura-bold: futura-pt-bold, sans-serif; // 700
+$poynter: 	  poynter-oldstyle-display, serif; // 400, 700
+$urbane: 	  urbane, sans-serif; // 300, 500, 700
+
+// Rig Solid font:
+$rig-solid-bold-fill: 		 rig-solid-bold-fill, sans-serif; // white fill w/ black shadows
+$rig-solid-bold-halftone: 	 rig-solid-bold-halftone, sans-serif; // same but w/ shaded shadows
+$rig-solid-bold-inline: 	 rig-solid-bold-inline, sans-serif; // line in the middle, dark inside, outline for 'shadow'
+$rig-solid-bold-inline-solo: rig-solid-bold-inline-solo, sans-serif; // same as above, but no shadow
+$rig-solid-bold-outline: 	 rig-solid-bold-outline, sans-serif; // 3-D but all outlines, no fill
+$rig-solid-bold-reverse: 	 rig-solid-bold-reverse, sans-serif; // black fill, transparent shadow
