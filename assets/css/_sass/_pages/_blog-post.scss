@@ -3,17 +3,29 @@
 }
 
 body {
+	font-family: $futura;
+}
 
+main {
+	padding: 3rem 4.167%;
+	max-width: 1000px;
+	margin: 0 auto;
+	@media screen and (min-width: 450px) {
+		padding: 3rem 8.33%;
+	}	
 }
 
 // --- Headers --- //
 
 h1, h2, h3, h4, h5, h6 {
-
+	line-height: 1
 }
 
 h1 {
-
+	font-size: 4rem;
+	margin: 0;
+	padding: .25em 0;
+	line-height: 1;
 }
 
 h2 {
@@ -70,6 +82,16 @@ img {
 
 hr {
 
+}
+
+// --- Code: --- //
+
+pre {
+	font-family: $covik-mono;
+}
+
+code {
+	font-family: $covik-mono;
 }
 
 /*
