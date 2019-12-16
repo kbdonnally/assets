@@ -1,0 +1,58 @@
+# 1. metadata
+title: Assets
+baseurl: "/assets"
+url: "http://katherinedoes.design" # the base hostname & protocol for your site, e.g. http://example.com
+
+description: >- 
+  Asset repository for reusable pieces of code (HTML, CSS, JS, Python)
+  and reusable images (e.g., background textures).
+
+# 2. build settings
+incremental: true
+markdown: kramdown
+
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - assets/python
+  - node_modules
+  - vendor
+  - notes
+
+permalink: /:year/:month/:title/
+
+collections_dir: collections
+
+# example setup
+# collections:
+#  collection-name:
+#    output: true
+#    permalink: /:collection/:slug/
+
+# 3. assets
+sass:
+  sass_dir: "assets/css/_sass"
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "pages"
+    values:
+      order: 10
+  - scope:
+      path: ""
+    values:
+      layout: no-style-2
+
+# defaults explained:
+# 1. static images are in assets/img/*
+# 2. by default, any pages/* document has
+#    'order' var of value '10'
+# 3. all pages have no-style-2 layout unless
+#    otherwise specified

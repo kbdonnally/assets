@@ -1,0 +1,30 @@
+/* Magic Kitties: */
+
+.magic-kitties-wrapper {
+	position: relative;
+	display: grid;
+	grid-template-areas: 'subhed subhed link'
+						 'hed hed hed'
+						 '. para para';
+	grid-template-columns: 1fr 2fr 2fr;
+}
+
+.magic-kitties__subhed {
+	grid-area: subhed;
+}
+
+.magic-kitties__title {
+	grid-area: hed;
+}
+
+.mk-title__text {
+
+}
+
+.magic-kitties__text {
+	grid-area: para;
+}
+
+.magic-kitties__link {
+	grid-area: link;
+}
