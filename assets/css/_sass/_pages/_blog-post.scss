@@ -126,13 +126,14 @@ hr {
 // --- Code: --- //
 
 pre {
-	font-size: 14px;
-	font-family: $input-mono;
+	//font-size: 14px;
+	font-family: $inconsolata;
 }
 
 code {
-	font-size: 14px;
-	font-family: $input-mono;
+	padding: 1rem !important;
+//	font-size: 14px;
+	font-family: $inconsolata;
 }
 
 // --- Blockquote --- //
