@@ -8,6 +8,7 @@ body {
 }
 
 main {
+	position: relative;
 	padding: 3rem 4.167%;
 	max-width: 1000px;
 	margin: 0 auto;
@@ -91,8 +92,8 @@ ul {
 			left: -14px;
 			top: 50%;
 			transform: translate(0,-50%);
-			height: 8px;
-			width: 8px;
+			height: 7px;
+			width: 7px;
 			border-radius: 50%;
 			background-color: $halfgray;
 		}
@@ -119,22 +120,24 @@ a {
 }
 
 img {
-
+	max-width: 100%;
 }
 
 // --- Line break --- //
 
 hr {
-
+	color: $halfgray;
 }
 
 // --- Code: --- //
 
 pre {
+	font-size: 1rem;
 	font-family: $covik-mono;
 }
 
 code {
+	font-size: 1rem;
 	font-family: $covik-mono;
 }
 

@@ -44,6 +44,8 @@ Leela's gonna kill me. We're also Santa Claus! I'm just glad my fat, ugly mama i
 
 ***
 
+![Stripes]({{ 'assets/img/unsplash/mitchell-luo_stripes.jpg' | relative_url }})
+
 *From Doctor Who:*
 
 > Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.
