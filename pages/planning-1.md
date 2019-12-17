@@ -45,3 +45,19 @@ permalink: /planning-1/
 3. `<th></th>` - sample attributes = `scope='row'`, when making a table, use this tag to differentiate the first row/column of cells as heading cells for all other cells in same column or row. Browsers show this lil dude centered and bold in the table cell. `scope` defines whether it's a row header or a column header.
 4. `<td></td>` - table data cell
 5. `colspan='number'`, `rowspan='number'`: use with `<th>` or `<td>` cells; spans cells across multiple rows
+
+***
+
+
+Navigation | Homepages | Pages | Wildcard
+========== | ========= | ===== | ========
+Nav menu, top | Homepage, hero image | Blog | Neatline maps page
+Nav menu, side, left | Homepage, text heavy | Blog post | Sudoku game
+Nav menu, side, right | Homepage, illustration | Events | Working form
+Nav menu, top, sticky | Homepage, other | Event post | Image carousel
+Footer | --- | Portfolio (1) | Santa Tracker CSS
+--- | --- | Portfolio (2) | ---
+--- | --- | Portfolio (3) | ---
+--- | --- | About (1) | ---
+--- | --- | About (2) | ---
+--- | --- | About (3) | ---
