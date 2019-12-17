@@ -15,11 +15,16 @@
 // - Order:   least-to-most specific, so cascade flows properly
 //            (NB: vars first b/c can't invoke b/f define)
 
+// syntax highlighting:
+// @import '_syntax-schemes/atom-one-dark';
+// @import '_syntax-schemes/dracula';
+@import '_syntax-schemes/ir-black';
+// @import '_syntax-schemes/monokai-sublime';
+
+
+
+
 // vars:
-// @import '_vars/_syntax-schemes/atom-one-dark';
-//@import '_vars/_syntax-schemes/monokai-sublime';
-@import '_vars/_syntax-schemes/dracula';
-@import '_vars/_syntax-schemes/ir-black';
 @import '_vars/colors';
 @import '_vars/fonts';
 
