@@ -24,9 +24,11 @@ I've been there. My folks were always on me to groom myself and wear underpants.
 2. But I've never been to the moon!
 3. Large bet on myself in round one.
 
-### Fry! Quit doing the right thing, you jerk!
+## Fry! Quit doing the right thing, you jerk!
 
-Maybe I love you so much I love you no matter who you are pretending to be. Anyhoo, your net-suits will allow you to experience Fry's worm infested bowels as if you were actually wriggling through them.
+### Maybe I love you so much I love you no matter who you are pretending to be. Anyhoo, your net-suits will allow you to experience Fry's worm infested bowels as if you were actually wriggling through them.
+
+#### Shut up and get to the point!
 
 - Shut up and get to the point!
 - I'm Santa Claus!

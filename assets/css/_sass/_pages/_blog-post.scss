@@ -22,22 +22,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 4rem; // total height: 6rem
 	margin: 0;
 	padding: .25em 0;
 	line-height: 1;
 }
 
 h2 {
-
+	font-size: 2.5rem; // total height: 3.75rem
+	margin: 0;
+	padding: .25em 0;
+	line-height: 1;
 }
 
 h3 {
-
+	font-size: 1.625rem; // total height: 2.5175rem
+	margin: 0;
+	padding: calc(.875rem / 2) 0;
+	line-height: 1;
 }
 
 h4 {
-
+	font-size: 1.25rem;
+	margin: 0;
+	padding: calc(.75rem / 2) 0;
+	line-height: 1;
 }
 
 // --- Paragraphs --- //
