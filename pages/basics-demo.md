@@ -101,6 +101,27 @@ img {
 
 ***
 
+**Links & italics demo:**
+
+*Usage of syntax highlighting: [highlight.js](https://highlightjs.org/).* Or, if you prefer no italics, [highlight.js](https://highlightjs.org/).
+
+```
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: $halfgray;
+	border-bottom: 1px solid $halfgray;
+	transition: color .2s, border-bottom .2s;
+	&:hover, &:focus {
+		color: black;
+		border-bottom: 1px solid black;
+	}
+}
+
+```
+
+***
+
 **Lists demo:**
 
 - Shut up and get to the point!
