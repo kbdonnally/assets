@@ -1,3 +1,3 @@
 # Assets
 
-Asset repository for reusable pieces of code (HTML, CSS, JS, Python) and reusable images (e.g., background textures).
+Designed to hold custom CSS, HTML, JS, & Python reusable code chunks. Also holds images of note, particularly backgrounds.
