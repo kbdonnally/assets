@@ -30,10 +30,9 @@
 
 // layouts:
 @import '_layouts/basics-1';
-//@import '_layouts/blog-post';
-//@import '_layouts/elements';
-//@import '_layouts/general';
+
+// includes:
+@import '_includes/nav-menu--top';
 
 // pages:
-//@import '_pages/blog-post';
 @import '_pages/magic-kitties';
