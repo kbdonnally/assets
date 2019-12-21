@@ -6,7 +6,10 @@
 
 body {
 	font-family: $futura;
-//	font-size: 18px;
+	@media screen and (min-width: 600px) {
+		font-size: 18px;
+		line-height: 1.5;
+	}
 }
 
 main {
@@ -27,18 +30,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 4rem; // total height: 6rem
+	font-size: 2.5rem; // total height: 
 	padding: .25em 0;
+	@media screen and (min-width: 450px) {
+		font-size: 3rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 4rem; // total height: 6rem
+	}
 }
 
 h2 {
-	font-size: 2.5rem; // total height: 3.75rem
+	font-size: 1.875rem; // total height: 3.75rem
 	padding: .25em 0;
+	@media screen and (min-width: 450px) {
+		font-size: 2.5rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 3rem; // total height: 6rem
+	}
+
 }
 
 h3 {
-	font-size: 1.625rem; // total height: 2.5175rem
+	font-size: 1.5rem; // total height: 2.5175rem
 	padding: calc(.875rem / 2) 0;
+	@media screen and (min-width: 450px) {
+		font-size: 1.5rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 1.625rem; // total height: 
+	}
 }
 
 h4 {
@@ -49,7 +71,6 @@ h4 {
 // --- Paragraphs --- //
 
 p {
-
 }
 
 em {
@@ -142,7 +163,9 @@ code {
 
 blockquote {
 	color: $halfgray;
-	margin: 1em 2em;
+	margin: 1em 0;
+	padding: 0 2em;
+	border-left: 1px solid black;
 }
 
 /*
