@@ -21,7 +21,7 @@ permalink: /collapsing-menu/
 			{% endfor %}
 		</ul>
 		<!-- more 'button' -->
-		<div class="collapse-menu__more">More</div>
+		<div class="collapse-menu__more--wrapper"><div class="collapse-menu__more">More</div></div>
 		<!-- second menu: -->
 		<ul class="collapse-menu__list-2">
 			{% for page in site.pages %}
@@ -65,3 +65,5 @@ permalink: /collapsing-menu/
 		<p>The way I see it, every life is a pile of good things and bad things.…hey.…the good things don’t always soften the bad things; but vice-versa the bad things don’t necessarily spoil the good things and make them unimportant. You hit me with a cricket bat.</p>
 	</blockquote>
 </main>
+
+<script src="{{ 'assets/js/collapsing-menu.js' | relative_url }}"></script>
