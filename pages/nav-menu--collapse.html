@@ -3,40 +3,65 @@ title: Collapsing Top Menu
 layout: no-style
 permalink: /collapsing-menu/
 ---
-
 <nav class="collapse-menu-wrapper">
 	<section class="collapse-menu__home-wrapper">
 		<a class="collapse-menu__home-link" href="{{ site.url }}{{ site.baseurl }}">
-		{% include black-sunburst.svg %}
+			{% include black-sunburst.svg %}
 		</a>
 	</section>
-	<section>
 	<section class="collapse-menu__lists-wrapper">
 		<!-- first menu: -->
 		<ul class="collapse-menu__list-1">
-		{% for page in site.pages %}
-		{% if page.title %}
+			{% for page in site.pages %}
+			{% if page.title %}
 			<li class="collapse-menu__list-item--1">
 				<a class="collapse-menu__link--1" href="{{ page.url | relative_url}}">{{ page.title }}</a>
 			</li>
-		{% endif %}
-		{% endfor %}
+			{% endif %}
+			{% endfor %}
 		</ul>
 		<!-- more 'button' -->
 		<div class="collapse-menu__more">More</div>
 		<!-- second menu: -->
 		<ul class="collapse-menu__list-2">
-		{% for page in site.pages %}
-		{% if page.title %}
+			{% for page in site.pages %}
+			{% if page.title %}
 			<li class="collapse-menu__list-item--2">
 				<a class="collapse-menu__link--2" href="{{ page.url | relative_url}}">{{ page.title }}</a>
 			</li>
-		{% endif %}
-		{% endfor %}
+			{% endif %}
+			{% endfor %}
 		</ul>
 	</section>
 </nav>
 
-<main class="nav-menu--collapse-wrapper">
-
+<main class="nav-menu--dummy-text">
+	<h1 id="media-queries">Media Queries</h1>
+	<hr>
+	<p><strong>Demos:</strong></p>
+	<h1 id="header-1---title-of-blog-post">Header 1 - Title of Blog Post</h1>
+	<p>You know when grown-ups tell you ‘everything’s going to be fine’ and you think they’re probably lying to make you feel better? The way I see it, every life is a pile of good things and bad things.…hey.…the good things don’t always soften the bad things; but vice-versa the bad things don’t necessarily spoil the good things and make them unimportant.</p>
+	<h2 id="header-2">Header 2</h2>
+	<p>Heh-haa! Super squeaky bum time! I’m the Doctor, I’m worse than everyone’s aunt. <em>catches himself</em> And that is not how I’m introducing myself. They’re not aliens, they’re Earth…liens! Sorry, checking all the water in this area; there’s an escaped fish.</p>
+	<p>They’re not aliens, they’re Earth…liens! Did I mention we have comfy chairs? <em>Insistently</em> Bow ties are cool! <strong>Come on Amy, I’m a normal bloke, tell me what normal blokes do!</strong> <em>Heh-haa!</em> Super squeaky bum time!</p>
+	<h3 id="header-3">Header 3</h3>
+	<p>Aw, you’re all Mr. Grumpy Face today. You hit me with a cricket bat. Annihilate? No. No violence. I won’t stand for it. Not now, not ever, do you understand me?! I’m the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn’t you?</p>
+	<h4 id="header-4">Header 4</h4>
+	<p>The way I see it, every life is a pile of good things and bad things.…hey.…the good things don’t always soften the bad things; but vice-versa the bad things don’t necessarily spoil the good things and make them unimportant. You hit me with a cricket bat.</p>
+	<hr>
+	<ul>
+		<li>I am the last of my species, and I know how that weighs on the heart so don’t lie to me!</li>
+		<li>Did I mention we have comfy chairs?</li>
+		<li>No, I’ll fix it. I’m good at fixing rot. Call me the Rotmeister. No, I’m the Doctor. Don’t call me the Rotmeister.</li>
+	</ul>
+	<hr>
+	<ol>
+		<li>I’m the Doctor. Well, they call me the Doctor. I don’t know why. I call me the Doctor too. I still don’t know why.</li>
+		<li>I’m the Doctor, I’m worse than everyone’s aunt. <em>catches himself</em> And that is not how I’m introducing myself.</li>
+		<li>You know how I sometimes have really brilliant ideas?</li>
+	</ol>
+	<hr>
+	<blockquote>
+		<p>The way I see it, every life is a pile of good things and bad things.…hey.…the good things don’t always soften the bad things; but vice-versa the bad things don’t necessarily spoil the good things and make them unimportant. You hit me with a cricket bat.</p>
+	</blockquote>
 </main>
