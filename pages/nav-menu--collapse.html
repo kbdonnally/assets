@@ -1,0 +1,42 @@
+---
+title: Collapsing Top Menu
+layout: no-style
+permalink: /collapsing-menu/
+---
+
+<nav class="collapse-menu-wrapper">
+	<section class="collapse-menu__home-wrapper">
+		<a class="collapse-menu__home-link" href="{{ site.url }}{{ site.baseurl }}">
+		{% include black-sunburst.svg %}
+		</a>
+	</section>
+	<section>
+	<section class="collapse-menu__lists-wrapper">
+		<!-- first menu: -->
+		<ul class="collapse-menu__list-1">
+		{% for page in site.pages %}
+		{% if page.title %}
+			<li class="collapse-menu__list-item--1">
+				<a class="collapse-menu__link--1" href="{{ page.url | relative_url}}">{{ page.title }}</a>
+			</li>
+		{% endif %}
+		{% endfor %}
+		</ul>
+		<!-- more 'button' -->
+		<div class="collapse-menu__more">More</div>
+		<!-- second menu: -->
+		<ul class="collapse-menu__list-2">
+		{% for page in site.pages %}
+		{% if page.title %}
+			<li class="collapse-menu__list-item--2">
+				<a class="collapse-menu__link--2" href="{{ page.url | relative_url}}">{{ page.title }}</a>
+			</li>
+		{% endif %}
+		{% endfor %}
+		</ul>
+	</section>
+</nav>
+
+<main class="nav-menu--collapse-wrapper">
+
+</main>
