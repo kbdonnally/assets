@@ -1,7 +1,7 @@
 <!-- Top nav menu: -->
 <nav class="nav-menu-wrapper--top">
+	<div class="nav-list__item--home"><a href="{{ site.url }}{{ site.baseurl }}"><!--img src="{{ 'assets/img/svg/sunburst-black.svg' | relative_url }}" /--> {% include black-sunburst.svg %}</a></div>
 	<ul class="nav-menu__list--top">
-		<li class="nav-list__item--home"><a href="{{ site.url }}{{ site.baseurl }}"><img src="{{ 'assets/img/svg/sunburst-black.svg' | relative_url }}" /></a></li>
 	{% for page in site.pages %}
 	{% if page.title %}
 		<li class="nav-list__item--top">
