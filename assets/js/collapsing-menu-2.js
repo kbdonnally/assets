@@ -34,3 +34,11 @@ console.log('List two hiding slice: ' + listTwoHideSlice);
 for (const item of listTwoHideSlice) {
 	item.classList.add('collapse-menu--to-hide'); // hide items outside of width range
 }
+
+// --------- Button -------- //
+
+const moreButton = document.querySelector('.collapse-menu__list-2');
+
+for (const [index, item] of listTwo.entries()) {
+	item.classList.add('collapse-menu--to-hide');
+}

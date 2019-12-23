@@ -45,3 +45,5 @@ for (let [i, item] of childrenToHide.entries()) {
 		item.classList.add('test-2');
 	}
 }
+
+// ------ List 2 ---------- //

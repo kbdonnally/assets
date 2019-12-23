@@ -10,7 +10,7 @@
 	display: flex;
 	justify-content: space-between;
 	height: 60px;
-	width: 100vw;
+	max-width: 100vw;
 	background-color: lavender;
 	padding: 0 2rem;
 }
@@ -81,10 +81,12 @@
 .collapse-menu__more--wrapper {
 	display: flex;
 	align-items: center;
+	width: 160px;
+	margin-left: 2rem;
 }
 
 .collapse-menu__more {
-	padding-left: 2rem;
+	// padding-left: 2rem;
 }
 
 // ------------ List 2 ------------ //
@@ -92,10 +94,12 @@
 // ul
 .collapse-menu__list-2 {
 	position: absolute;
-	right: 0;
+	right: 1rem;
 	top: 60px;
+//	width: 240px;
 	padding: 0;
 	white-space: nowrap;
+	z-index: 4;
 }
 
 // li
