@@ -24,21 +24,55 @@ for (const item of listOneSlice) {
 	item.classList.add('collapse-menu--to-hide'); // hide items outside of width range
 }
 
-// List 2 activity //
+// --------------- List 2 ------------- //
 
 const listTwoHideSlice = [...listTwo].slice(0, index + 1);
 const listTwoShowSlice = [...listTwo].slice(index);
-console.log('List two hiding slice: ' + listTwoHideSlice);
+const moreButton 	   = document.querySelector('.collapse-menu__more--wrapper');
 
 // hide from List 1
 for (const item of listTwoHideSlice) {
 	item.classList.add('collapse-menu--to-hide'); // hide items outside of width range
 }
 
-// --------- Button -------- //
-
-const moreButton = document.querySelector('.collapse-menu__list-2');
-
+// default state b/c of button
 for (const [index, item] of listTwo.entries()) {
 	item.classList.add('collapse-menu--to-hide');
 }
+
+function showSecondList() {
+	for (const item of listTwoShowSlice) {
+		item.classList.remove('collapse-menu--to-hide');
+		item.classList.add('collapse-menu--to-show');
+	}	
+}
+
+function hideSecondList() {
+	if (listTwoShowSlice[0].classList.contains('collapse-menu--to-show')) {
+		for (const item of listTwo) {
+			item.classList.add('collapse-menu--to-hide');
+			console.log('adding');
+		}
+	}
+}
+
+
+moreButton.addEventListener('click', showSecondList);
+// moreButton.addEventListener('click', hideSecondList)
+
+// ------------------------ //
+
+/* var specifiedElement = document.querySelector('.collapse-menu__list-2');
+
+//I'm using "click" but it works with any event
+document.addEventListener('click', function(event) {
+  var isClickInside = specifiedElement.contains(event.target);
+
+  if (!isClickInside) {
+    for (const item of listTwoShowSlice) {
+    	item.classList.add('collapse-menu--to-hide');
+    	item.classList.remove('collapse-menu--to-show');
+    }
+  }
+});
+*/
