@@ -1,0 +1,45 @@
+---
+title: Collapsing Menu Practice
+layout: no-style
+permalink: /practice-menu/
+---
+
+<nav class="flex-menu-wrapper">
+	<section class="flex-menu">
+		<section class="flex-menu__home-wrapper">
+			<a class="flex-menu__home-link" href="{{ site.url }}{{ site.baseurl }}">
+				{% include black-sunburst.svg %}
+			</a>
+		</section>
+		<section class="flex-menu__content-wrapper">
+			<!-- first menu: -->
+			<ul class="flex-menu__list-1">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li class="flex-menu__list-item--1">
+					<a class="flex-menu__link--1" href="{{ page.url | relative_url}}">{{ page.title }}</a>
+				</li>
+				{% endif %}
+				{% endfor %}
+			</ul> <!-- end list 1 -->
+
+			<section class="flex-menu__more-wrapper">
+				<!-- prompt: -->
+				<div class="flex-menu__more-prompt">More</div>
+				<!-- potential items: -->
+				<ul class="flex-menu__more-list">
+					{% for page in site.pages %}
+					{% if page.title %}
+					<li class="flex-menu__list-item--2">
+						<a class="flex-menu__link--2" href="{{ page.url | relative_url}}">{{ page.title }}</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</section>
+		</section>
+	</section>
+</nav>
+
+
+<script src="{{ 'assets/js/collapsing-menu--new.js' | relative_url }}"></script>

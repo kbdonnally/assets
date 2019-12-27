@@ -3,7 +3,7 @@
 // ------------- Outer Elements ------------- //
 
 // nav
-.collapse-menu-wrapper {
+.flex-menu-wrapper {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -18,13 +18,13 @@
 // ----------- List 1 ----------- //
 
 // section 1
-.collapse-menu__home-wrapper {
+.flex-menu__home-wrapper {
 	display: flex;
 	align-items: center;
 }
 
 // a
-.collapse-menu__home-link {
+.flex-menu__home-link {
 	display: flex;
 	align-items: center;
 	min-height: 40px;
@@ -49,7 +49,7 @@
 }
 
 // section 1
-.collapse-menu__lists-wrapper {
+.flex-menu__lists-wrapper {
 	display: flex;
 	max-width: 75%;
 	overflow-x: hidden;
@@ -57,14 +57,14 @@
 }
 
 // ul
-.collapse-menu__list-1 {
+.flex-menu__list-1 {
 	position: relative;
 	display: flex;
 	white-space: nowrap;
 }
 
 // li
-.collapse-menu__list-item--1 {
+.flex-menu__list-item--1 {
 	&::before {
 		display: none;
 	}
@@ -72,27 +72,27 @@
 }
 
 // a
-.collapse-menu__link--1 {
+.flex-menu__link--1 {
 
 }
 
 // --------- More ----------- //
 
-.collapse-menu__more--wrapper {
+.flex-menu__more--wrapper {
 	display: flex;
 	align-items: center;
 	width: 160px;
 	margin-left: 2rem;
 }
 
-.collapse-menu__more {
+.flex-menu__more {
 	// padding-left: 2rem;
 }
 
 // ------------ List 2 ------------ //
 
 // ul
-.collapse-menu__list-2 {
+.flex-menu__list-2 {
 	position: absolute;
 	right: 1rem;
 	top: 60px;
@@ -103,14 +103,14 @@
 }
 
 // li
-.collapse-menu__list-item--2 {
+.flex-menu__list-item--2 {
 	&::before {
 		display: none;
 	}
 }
 
 // a
-.collapse-menu__link--2 {
+.flex-menu__link--2 {
 
 }
 
@@ -122,13 +122,13 @@
 
 // ----------------- JS CLASSES ---------------------- //
 
-.collapse-menu--to-show {
+.flex-menu--to-show {
 	a {
 		display: initial;
 	}
 }
 
-.collapse-menu--to-hide {
+.flex-menu--to-hide {
 	padding: 0;
 	a {
 		display: none;
