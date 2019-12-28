@@ -18,9 +18,51 @@ function toggleVisibility() {
 	}
 }
 
+//morePrompt.addEventListener('click', toggleVisibility);
+morePrompt.addEventListener('click', resizeMenu);
 
-morePrompt.addEventListener('click', toggleVisibility);
+const moreWidth = morePrompt.offsetWidth;
+const menuWidth = window.innerHeight / 3; 
+const openSpace = menuWidth - moreWidth;
+const listOne = document.querySelector('.flex-menu__list-1');
+const listTwo = document.querySelector('.flex-menu__more-list');
+console.log(listTwo);
+const listOneItems = [...listOne.children];
+const listTwoItems = [...listTwo.children];
+console.log(listOneItems);
+console.log(listTwoItems);
 
-// Issue: when clicking for a third time, the 'hide' class is added without the 'show' class ever being taken away
-// Both classes are present and that's what we need to prevent
-// Where can the 'show' class be targeted and deleted?
+
+function resizeMenu() {
+	for (let item of listOneItems) {
+		item.classList.remove("hidden--js");
+	}
+	for (let item of listTwoItems) {
+		item.classList.remove("hidden--js");
+	}
+
+	const listOneWidths =  Array.from(listOne.children, item => parseInt(item.offsetWidth));
+	let sumWidth 	   = 0;
+	let i 			   = -1;
+
+	// add more items to menu until run out of room
+	while (sumWidth < openSpace) {
+		i++;
+		sumWidth += listOneWidths[i];
+		console.log('Entry: ' + listOneWidths[i], i);
+		console.log('Sum: ' + sumWidth);
+	}
+
+	// mark where that happens
+	var splitIndex 	  = i;
+
+	// hide post-split on main menu
+	for (i; i < (listOneItems.length - 1); i++) {
+		listOneItems[i].classList.add("hidden--js");
+	}
+
+	// hide pre-split on sub-menu
+	for (var j=0; j < splitIndex; j++) {
+		moreItems[j].classList.add("hidden--js");
+	}
+}
