@@ -37,9 +37,10 @@ for (let item of listTwoItems) {
 }
 
 function reShowMenu() {
-	for (let item of listTwoItems) {
-		item.classList.toggle('hidden--js');
-		console.log(item);
+	for (let [j, item] of [...listTwoItems].entries()) {
+		if (j < splitIndex) {
+			item.classList.toggle('hidden--js');
+		}
 	}
 }
 
