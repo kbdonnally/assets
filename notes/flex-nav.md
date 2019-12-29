@@ -109,3 +109,13 @@ prompt.addEventListener('click', showSubMenu)
 ```
 
 Then, that's pretty much it!
+
+***
+
+## Updates
+
+It's technically working now! Still want to:
+
+1. Apply it on an aesthetically pleasing website as the example.
+2. Find where the skipped number is coming from and shift indices accordingly.
+3. On resize, change the number of #2's items showing *as well as* #1 (which is already being handled. Find how!).
