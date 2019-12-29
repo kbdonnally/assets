@@ -23,11 +23,13 @@ while (sumWidth < availableWidth) {
 
 const splitIndex = i;
 
+// menu 1
 for (i; i < (menuOneItems.length); i++) {
 	menuOneItems[i].classList.add('hidden--js');
 }
 
-for (var j=1; j < splitIndex; j++) {
+// menu 2
+for (var j=1; j < (splitIndex - 1); j++) {
 	if (document.querySelector('.nav-list-2__item')) {
 		menuTwoItems[j].classList.add('hidden--js');	
 	}

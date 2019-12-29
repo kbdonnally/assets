@@ -6,31 +6,31 @@ permalink: /menu-practice-2/
 
 <nav class="nav-wrapper">
 	<main class="nav-inner-wrapper">
+		<!-- item 1 in flex -->
 		<a class="nav__home-link" href="{{ site.url }}{{ site.baseurl }}">
 			Home
 		</a>
-
+		<!-- item 2 in flex -->
 		<section class="nav__list-holder">
-			<ul class="nav-list__1">
-				<li class="nav-list-1__item">Pineapple</li>
-				<li class="nav-list-1__item">Palm tree</li>
-				<li class="nav-list-1__item">Pelican</li>
-				<li class="nav-list-1__item">Papaya</li>
-				<li class="nav-list-1__item">Banana</li>
-				<li class="nav-list-1__item">Apple</li>
-				<li class="nav-list-1__item">Guava</li>
-				<li class="nav-list-1__item">Grapefruit</li>
+			<!-- list one: -->
+			<ul class="nav__list-1">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ page.title }}</a></li>
+				{% endif %}
+				{% endfor %}
 			</ul>
-			<ul class="nav-list__2">
-				<div class="nav-list__more-prompt">More</div>
-				<li class="nav-list-2__item">Pineapple</li>
-				<li class="nav-list-2__item">Palm tree</li>
-				<li class="nav-list-2__item">Pelican</li>
-				<li class="nav-list-2__item">Papaya</li>
-				<li class="nav-list-2__item">Banana</li>
-				<li class="nav-list-2__item">Apple</li>
-				<li class="nav-list-2__item">Guava</li>
-				<li class="nav-list-2__item">Grapefruit</li>
+			<!-- more prompt -->
+			<ul class="nav__more-prompt">
+				<li>More</li>
+			</ul>
+			<!-- list 2: -->
+			<ul class="nav__list-2">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ page.title }}</a></li>
+				{% endif %}
+				{% endfor %}
 			</ul>
 
 		</section>
