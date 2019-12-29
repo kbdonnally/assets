@@ -48,10 +48,10 @@ more.addEventListener('click', reShowMenu);
 
 function resizeMenu() {
 	// un-hide all the items
-	for (let item of menuItems) {
+	for (let item of listOneItems) {
 		item.classList.remove('hidden--js');
 	}
-	for (let item of moreItems) {
+	for (let item of listTwoItems) {
 		item.classList.remove('hidden--js');
 	}
 
