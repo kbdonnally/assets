@@ -20,27 +20,24 @@ while (sumWidth < listWidth) {
 	console.log(sumWidth, listWidth);
 }
 
-var splitIndex = i - 1;
+var splitIndex = parseInt(i - 1);
 
 console.log(splitIndex);
-
 console.log(i);
 console.log(listWidth)
 console.log(sumWidth);
 
 for (i; i < (listOneItems.length); i++) {
 	listOneItems[i].classList.add('hidden--js');
-}
+} // value of i has changed now, to 11
 
 for (let item of listTwoItems) {
 	item.classList.add('hidden--js');
 }
 
 function reShowMenu() {
-	for (let [j, item] of [...listTwoItems].entries()) {
-		if (j < splitIndex) {
-			item.classList.toggle('hidden--js');
-		}
+	for (let j=(splitIndex + 1); j < listTwoItems.length; j++) {
+		listTwoItems[j].classList.toggle('show-more-menu--js');
 	}
 }
 
