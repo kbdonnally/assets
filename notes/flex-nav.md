@@ -82,3 +82,30 @@ These are the menu item links. We don't want the padding on the `<ul>`s there ta
 ```
 
 This note is pretty self-explanatory. No discs allowed; we want just the link text itself, which should link to a page in the website. The discs have to be removed like this (vs. `list-style-type: none`) because they were made to imitate defaults with more control over them.
+
+***
+
+*Date: 12/29/19.*
+
+## Flexnav Progress
+
+Need to...
+
+1. Close the list when someone clicks on "Not List"
+2. Close the list when someone clicks "More"
+	- Already have that one down but I'm worried the toggle functionality isn't necessarily here to stay
+3. More accurately align the showing links, both horizontal and vertical
+4. Resize more accurately (perform calculations on resize, which is probably why I used to have one for `DOMContentLoaded` as well as `resize` and `click`. See below:
+
+```scss
+// display only # items that fit, hide rest in sub-menu	
+document.addEventListener('DOMContentLoaded', resizeMenu);
+
+// repeat on resize
+window.addEventListener('resize', resizeMenu);
+
+// show/hide sub-menu
+prompt.addEventListener('click', showSubMenu)
+```
+
+Then, that's pretty much it!
