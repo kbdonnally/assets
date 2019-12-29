@@ -80,6 +80,7 @@ body {
 	li {
 		margin: 0 auto;
 		line-height: 1;
+		cursor: pointer;
 		&::before {
 			display: none;
 		}
