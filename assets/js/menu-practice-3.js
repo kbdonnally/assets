@@ -1,5 +1,6 @@
 /* To go with menu-practice-2 */
 
+/* 1. Variables: */
 // elements
 const listOne 	    = document.querySelector('.nav__list-1');
 const listTwo 	    = document.querySelector('.nav__list-2');
@@ -12,6 +13,14 @@ const listOneWidths = [...listOneItems].map(x => parseInt(x.offsetWidth));
 let listWidth 		= parseInt(document.querySelector('.nav__list-1').offsetWidth);
 let i   			= -1;
 let sumWidth 		= 0;
+
+/* 2. Event Listeners: */
+// display only # items that fit, hide rest in sub-menu
+document.addEventListener('DOMContentLoaded', resizeMenu);
+// repeat on resize
+window.addEventListener('resize', resizeMenu);
+// show sub-menu
+more.addEventListener('click', reShowMenu);
 
 while (sumWidth < listWidth) {
 	i++;
@@ -37,14 +46,7 @@ function reShowMenu() {
 	}
 }
 
-// display only # items that fit, hide rest in sub-menu
-document.addEventListener('DOMContentLoaded', resizeMenu);
 
-// repeat on resize
-window.addEventListener('resize', resizeMenu);
-
-// show sub-menu
-more.addEventListener('click', reShowMenu);
 
 function resizeMenu() {
 	// un-hide all the items
