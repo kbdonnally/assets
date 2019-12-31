@@ -96,6 +96,10 @@ body {
 
 .nav__list-2 {
 	grid-area: list-2;
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 300px;
+	transform: translate(-20px, 0);
 }
 
 .nav-list__item {
