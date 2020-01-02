@@ -1,0 +1,41 @@
+---
+title: Image Gallery
+layout: no-style
+permalink: /image-gallery/
+---
+
+<main class="image-gallery-wrapper">
+
+<h1 class="image-gallery__page-title">Image Gallery</h1>
+
+{% assign imgdata = site.data.unsplash-images | sort: 'category' %}
+
+<ul class="image-gallery-wrapper">
+	{% for image in imgdata %}
+	{% assign path = 'assets/img/unsplash/' | append: image.title %}
+
+	<li class="gallery__item">
+		<h3>{{ image.title }}</h3>
+		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
+		<ul>
+			<li>Category: {{ image.category | capitalize}} </li>
+			<li>Width: {{ image.width }}px</li>
+			<li>Height: {{ image.height }}px</li>
+		</ul>
+	</li>
+{% endfor %}
+</ul>
+</main>
+
+<!--
+Sample data:
+
+- title: wesley-tingey-pink-marble.jpg
+  width: 3264
+  height: 4896
+  index: 63
+  category: abstract
+  tags:
+    - swirly
+    - salmon colored pink
+-->
