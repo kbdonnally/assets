@@ -21,6 +21,12 @@ permalink: /image-gallery/
 			<li>Category: {{ image.category | capitalize}} </li>
 			<li>Width: {{ image.width }}px</li>
 			<li>Height: {{ image.height }}px</li>
+			<li><span>Tags</span>
+				<ul>{% for tag in image.tags %}
+					<li>{{ tag }}</li>
+					{% endfor %}
+				</ul>
+			</li>
 		</ul>
 	</li>
 {% endfor %}
