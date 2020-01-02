@@ -19,5 +19,5 @@ dimensions = printDimensions(titles)
 for i, (title, dim) in enumerate(zip(titles, dimensions)):
 	width = dim[0]
 	height = dim[1]
-	myString = f'- title: {title}\n  width: {width}\n  height: {height}\n  index: {i+1}\n  category: null'
+	myString = f'- title: {title}\n  width: {width}\n  height: {height}\n  index: {i+1}\n  category: null\n'
 	print(myString)
