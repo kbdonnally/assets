@@ -14,14 +14,14 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 
+
 	<li class="gallery__item">
 		<h3>{{ image.title }}</h3>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
 			<li>Category: {{ image.category | capitalize}} </li>
-			<li>Width: {{ image.width }}px</li>
-			<li>Height: {{ image.height }}px</li>
-			<li><span>Tags</span>
+			<li>Dimensions: {{ image.width }}px &times; {{ image.height}}px</li>
+			<li><span>Tags:</span>
 				<ul>{% for tag in image.tags %}
 					<li>{{ tag }}</li>
 					{% endfor %}
@@ -36,12 +36,13 @@ permalink: /image-gallery/
 <!--
 Sample data:
 
-- title: wesley-tingey-pink-marble.jpg
-  width: 3264
-  height: 4896
-  index: 63
-  category: abstract
-  tags:
-    - swirly
-    - salmon colored pink
+categories:
+
+- abstract
+- pattern
+- flowers
+- leaves
+- wood
+- portraits
+- hands
 -->
