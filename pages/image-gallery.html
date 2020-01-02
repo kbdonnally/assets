@@ -16,7 +16,7 @@ permalink: /image-gallery/
 
 
 	<li class="gallery__item">
-		<h3>{{ image.title }}</h3>
+		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
 			<li>Category: {{ image.category | capitalize}} </li>
