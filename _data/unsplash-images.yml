@@ -163,8 +163,10 @@
   width: 5760
   height: 3840
   index: 18
-  category:
+  category: wood
   tags:
+    - rustic
+    - wood logs
 
 - title: dorelys-smits-small-wood.jpg
   width: 5097
