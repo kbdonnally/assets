@@ -27,12 +27,16 @@ main.image-gallery-wrapper {
 }
 
 .gallery__section-wrapper {
-	display: flex;
-	flex-flow: row wrap;
+//	display: flex;
+//	flex-flow: row wrap;
+	column-width: 250px;
+	column-count: 3;
 }
 
 .gallery__item {
 	border: 1px solid black;
+	padding: 1rem;
+	break-inside: avoid-column;
 	ul {
 		padding-left: 0;
 		li {
