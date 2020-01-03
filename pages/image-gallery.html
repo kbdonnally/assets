@@ -10,34 +10,50 @@ permalink: /image-gallery/
 
 {% assign imgdata = site.data.unsplash-images | sort: 'category' %}
 
-<ul class="image-gallery-wrapper">
+<article class="image-gallery-wrapper">
+
+
+
 	<h3 class="gallery__section-title">1. Hands</h3>
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'hands' %}
-	<li class="gallery__item">
-		<h4>{{ image.title }}</h4>
-		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
-		<ul>
-			<li>Category: {{ image.category | capitalize}} </li>
-			<li>Dimensions: {{ image.width }}px &times; {{ image.height}}px</li>
-			<li><span>Tags:</span>
-				<ul>{% for tag in image.tags %}
-					<li>{{ tag }}</li>
-					{% endfor %}
+	<section class="gallery__item">
+		<h4 class="gallery-item__title">{{ image.title }}</h4>
+		<img class="gallery-item__image"
+			 src="{{ path | relative_url}}"
+			 title="{{ image.title }}"
+			 aria-label="{{ image.title }}" 
+			 height="200" />
+		<ul class="gallery-item__metadata">
+			<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+			<li class="gallery-meta__dimensions">
+				<span>Dimensions:</span>
+				<ul class="gallery-dimensions__wrapper">
+					<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+					<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
 				</ul>
 			</li>
-		</ul>
-	</li>
+			<li class="gallery-meta__tags-wrapper">
+				<span>Tags:</span>
+			 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+					<li class="gallery-meta-tags__tag">{{ tag }}</li>
+					{% endfor %}
+				</ul>
+	 		</li>
+		</ul> <!-- end metadata -->
+	</section>
 	{% endif %}
 	{% endfor %}
 
 	<hr />
+
+	<!-- Abstract -->
 	<h3 class="gallery__section-title">2. Abstract</h3>
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'abstract' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
@@ -50,7 +66,7 @@ permalink: /image-gallery/
 				</ul>
 			</li>
 		</ul>
-	</li>
+	</section>
 	{% endif %}
 	{% endfor %}
 	<hr />
@@ -59,7 +75,7 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'pattern' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
@@ -72,7 +88,7 @@ permalink: /image-gallery/
 				</ul>
 			</li>
 		</ul>
-	</li>
+	</section>
 	{% endif %}
 	{% endfor %}
 	<hr />
@@ -81,7 +97,7 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'leaves' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
@@ -94,7 +110,7 @@ permalink: /image-gallery/
 				</ul>
 			</li>
 		</ul>
-	</li>
+	</section>
 	{% endif %}
 	{% endfor %}
 	<hr />
@@ -103,7 +119,7 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'flowers' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
@@ -116,7 +132,7 @@ permalink: /image-gallery/
 				</ul>
 			</li>
 		</ul>
-	</li>
+	</section>
 	{% endif %}
 	{% endfor %}
 	<hr />
@@ -125,7 +141,7 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'portraits' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
@@ -138,7 +154,7 @@ permalink: /image-gallery/
 				</ul>
 			</li>
 		</ul>
-	</li>
+	</section>
 	{% endif %}
 	{% endfor %}
 	<hr />
@@ -147,24 +163,27 @@ permalink: /image-gallery/
 	{% for image in imgdata %}
 	{% assign path = 'assets/img/unsplash/' | append: image.title %}
 	{% if image.category == 'wood' %}
-	<li class="gallery__item">
+	<section class="gallery__item">
 		<h4>{{ image.title }}</h4>
 		<img src="{{ path | relative_url}}" title="{{ image.title }}" aria-label="{{ image.title }}" height="200" />
 		<ul>
 			<li>Category: {{ image.category | capitalize}} </li>
-			<li>Dimensions: {{ image.width }}px &times; {{ image.height}}px</li>
+			<li>Dimensions: 
+				<ul>
+					<li>Width: {{ image.width }}px</li>
+					<li>Height: {{ image.height}}px</li>
 			<li><span>Tags:</span>
 				<ul>{% for tag in image.tags %}
 					<li>{{ tag }}</li>
 					{% endfor %}
-				</ul>
+section>	</ul>
 			</li>
 		</ul>
 	</li>
 	{% endif %}
 	{% endfor %}
 	<hr />
-</ul>
+</article>
 </main>
 
 <!--
