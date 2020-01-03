@@ -48,8 +48,12 @@ main.image-gallery-wrapper {
 
 .gallery__item {
 	border: 1px solid black;
+	margin-top: 1rem;
 	padding: 1rem;
 	break-inside: avoid-column;
+	&:first-of-type {
+		margin-top: 0;
+	}
 	ul {
 		padding-left: 0;
 		li {
