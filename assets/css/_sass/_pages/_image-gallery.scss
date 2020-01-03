@@ -1,1 +1,187 @@
 /* Goes with image-gallery.md */
+
+// Title section
+
+.image-gallery__title-wrapper {
+	padding: 0 8.33%;
+}
+
+.image-gallery__page-title {
+
+}
+
+// Gallery section
+
+main.image-gallery-wrapper {
+	max-width: 2000px;
+}
+
+.image-gallery-links__wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	h3 {
+		line-height: 1;
+		padding-top: 1rem;
+		a {
+			padding: 2px 5px;
+			margin: .5rem;
+			margin-top: 1rem;
+			border: 1px solid black;
+		}	
+	} 
+}
+
+
+
+// Image information: //
+
+.gallery__section-title {
+
+}
+
+.gallery__section-wrapper {
+//	display: flex;
+//	flex-flow: row wrap;
+	column-width: 250px;
+	column-count: 3;
+}
+
+.gallery__item {
+	border: 1px solid black;
+	margin-top: 1rem;
+	padding: 1rem;
+	break-inside: avoid-column;
+	&:first-of-type {
+		margin-top: 0;
+	}
+	ul {
+		padding-left: 0;
+		li {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+.gallery-item__title {
+
+}
+
+.gallery-item__image {
+
+}
+
+// ul
+.gallery-item__metadata {
+	span {
+		font-weight: bold;
+	}
+}
+
+// li
+.gallery-meta__category {
+
+}
+
+// li
+.gallery-meta__dimensions {
+
+}
+
+// ul
+.gallery-dimensions__wrapper {
+
+}
+
+// li
+.gallery-dimensions__height {
+	margin-left: 1rem;
+	&::after {
+		content: '';
+	    display: inline-block;
+	    position: absolute;
+	    left: -16px;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    height: 7px;
+	    width: 7px;
+	    border-radius: 50%;
+	    background-color: lavender;
+	}
+}
+
+// li
+.gallery-dimensions__width {
+	margin-left: 1rem;
+	&::after {
+		content: '';
+	    display: inline-block;
+	    position: absolute;
+	    left: -16px;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    height: 7px;
+	    width: 7px;
+	    border-radius: 50%;
+	    background-color: lavender;
+	}
+}
+
+// li
+.gallery-meta__tags-wrapper {
+
+}
+
+// ul
+.gallery-meta-tags__list {
+
+}
+
+// li
+.gallery-meta-tags__tag {
+	position: relative;
+	margin-left: 1rem;
+	&::after {
+		content: '';
+	    display: inline-block;
+	    position: absolute;
+	    left: -16px;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    height: 7px;
+	    width: 7px;
+	    border-radius: 50%;
+	    background-color: lavender;
+	}
+}
+
+/* Types of images: */
+
+.image-gallery__hands {
+
+}
+
+.image-gallery__abstract {
+
+}
+
+.image-gallery__patterns {
+
+}
+
+.image-gallery__leaves {
+
+}
+
+.image-gallery__flowers {
+
+}
+
+.image-gallery__portraits {
+
+}
+
+.image-gallery__wood {
+
+}
