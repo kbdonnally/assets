@@ -1,1 +1,127 @@
 /* Goes with image-gallery.md */
+
+// Title section
+
+.image-gallery__title-wrapper {
+
+}
+
+.image-gallery__page-title {
+
+}
+
+// Gallery section
+
+main.image-gallery-wrapper {
+	max-width: 2000px;
+}
+
+// Hands
+
+
+
+// Image information: //
+
+.gallery__section-title {
+
+}
+
+.gallery__section-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.gallery__item {
+	border: 1px solid black;
+	ul {
+		padding-left: 0;
+		li {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+.gallery-item__title {
+
+}
+
+.gallery-item__image {
+
+}
+
+// ul
+.gallery-item__metadata {
+
+}
+
+// li
+.gallery-meta__category {
+
+}
+
+// li
+.gallery-meta__dimensions {
+
+}
+
+// ul
+.gallery-dimensions__wrapper {
+
+}
+
+// li
+.gallery-dimensions__height {
+
+}
+
+// li
+.gallery-dimensions__width {
+
+}
+
+// li
+.gallery-meta__tags-wrapper {
+
+}
+
+// ul
+.gallery-meta-tags__list {
+
+}
+
+// li
+.gallery-meta-tags__tag {
+
+}
+
+/* Types of images: */
+
+.image-gallery__hands {
+
+}
+
+.image-gallery__abstract {
+
+}
+
+.image-gallery__patterns {
+
+}
+
+.image-gallery__leaves {
+
+}
+
+.image-gallery__flowers {
+
+}
+
+.image-gallery__portraits {
+
+}
+
+.image-gallery__wood {
+
+}
