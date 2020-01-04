@@ -16,7 +16,7 @@ permalink: /menu-practice-2/
 			<ul class="nav__list-1">
 				{% for page in site.pages %}
 				{% if page.title %}
-				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ page.title }}</a></li>
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ forloop.index }}. {{ page.title }}</a></li>
 				{% endif %}
 				{% endfor %}
 			</ul>
@@ -28,7 +28,8 @@ permalink: /menu-practice-2/
 			<ul class="nav__list-2">
 				{% for page in site.pages %}
 				{% if page.title %}
-				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ page.title }}</a></li>
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ forloop.index }}. {{ page.title }}</a></li>
+				<hr />
 				{% endif %}
 				{% endfor %}
 			</ul>
