@@ -8,7 +8,7 @@ body {
 	left: 0;
 	width: 100vw;
 	height: 60px;
-	background-color: #333;
+	background-color: black;
 }
 
 .nav-inner-wrapper {
@@ -27,17 +27,18 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
+	margin-left: 1rem;
 	padding: 0;
 	height: 60px;
 	border-width: 0;
 	svg {
-		height: 40px;
+		height: 48px;
 		path {
 			transition: fill .3s;
 		}
 		&:hover, &:focus {
 			path {
-				fill: purple;
+				fill: $mbpink;
 			}
 		}
 	}
@@ -81,6 +82,13 @@ body {
 	&::before {
 		display: none;
 	}
+	a {
+		color: white;
+		border-width: 0;
+		&:hover, &:focus {
+			color: $mbpink;
+		}
+	}
 }
 
 /* More prompt: */
@@ -101,7 +109,7 @@ body {
 	// border: 2px solid black;
 	cursor: pointer;
 	&:hover {
-		background-color: lightgray;
+		background-color: $mbpink;
 	}
 	li {
 		margin: 0 auto;
@@ -110,6 +118,9 @@ body {
 		&::before {
 			display: none;
 		}
+	}
+	@media screen and (max-width: 550px) {
+		width: 130px;
 	}
 }
 
@@ -120,12 +131,23 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	max-width: 300px;
-	transform: translate(-20px, 0);
+//	transform: translate(-20px, 0);
+	background-color: black;
+	.nav-list__item {
+		border-bottom: 1px solid $jet;
+	}
 }
 
 .nav-list__item {
+	padding: .5rem;
 	&::before {
 		display: none;
 	}	
 
+}
+
+/* Dummy Menu: */
+
+.dummy-menu {
+	margin-top: 72px;
 }
