@@ -29,7 +29,6 @@ permalink: /menu-practice-2/
 				{% for page in site.pages %}
 				{% if page.title %}
 				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ forloop.index }}. {{ page.title }}</a></li>
-				<hr />
 				{% endif %}
 				{% endfor %}
 			</ul>
@@ -37,5 +36,14 @@ permalink: /menu-practice-2/
 		</section>
 	</main>
 </nav>
+
+<ul class="dummy-menu">
+	{% for page in site.pages %}
+	{% if page.title %}
+	<li><a href="{{ page.url | relative_url}}">{{ forloop.index }}. {{ page.title }}</a></li>
+	{% endif %}
+	{% endfor %}
+</ul>
+
 
 <script src="{{ 'assets/js/menu-practice-3.js' | relative_url}}"></script>
