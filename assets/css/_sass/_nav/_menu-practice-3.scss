@@ -30,9 +30,9 @@ body {
 	right: 0;
 	top: 0;
 	display: grid;
-	grid-template-areas: 'list-1 more'
-						 '...... list-2';
-	grid-template-columns: 1fr 150px;
+	grid-template-areas: 'list-1 list-1 more'
+						 '...... list-2 list-2';
+	grid-template-columns: 1fr 50px 150px;
 }
 
 /* List 1: */
@@ -79,7 +79,7 @@ body {
 	font-weight: bold;
 	color: white;
 	text-align: center;
-	border: 2px solid black;
+	// border: 2px solid black;
 	cursor: pointer;
 	&:hover {
 		background-color: lightgray;
