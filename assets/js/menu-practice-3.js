@@ -90,8 +90,8 @@ function showSubMenu() {
 	// if showing and user clicks outside of it, hide again
 	if (listTwo.classList.length == 2) {
 		window.addEventListener("click", function(e) {
-			if (e.target.classList.contains("flexnav-more__item") == false && 
-				e.target.classList.contains("flexnav-more__prompt") == false) {	
+			if (e.target.classList.contains("nav-list__item") == false && 
+				e.target.classList.contains("nav__more-prompt") == false) {	
 				console.log("this is when it should hide again");
 				listTwo.classList.remove("show-more-menu--js");
 			}	
