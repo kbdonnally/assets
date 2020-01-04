@@ -20,8 +20,27 @@ body {
 	margin: 0;
 }
 
+// a > svg
 .nav__home-link {
-
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	border-width: 0;
+	svg {
+		height: 40px;
+		path {
+			transition: fill .3s;
+		}
+		&:hover, &:focus {
+			path {
+				fill: purple;
+			}
+		}
+	}
 }
 
 // container for List 1, More prompt, & List 2
