@@ -22,6 +22,8 @@ window.addEventListener('resize', resizeMenu);
 // show sub-menu
 more.addEventListener('click', reShowMenu);
 
+more.addEventListener('click', showSubMenu);
+
 while (sumWidth < listWidth) {
 	i++;
 	sumWidth += listOneWidths[i];
@@ -39,6 +41,7 @@ for (i; i < (listOneItems.length); i++) {
 for (let item of listTwoItems) {
 	item.classList.add('hidden--js');
 }
+
 
 function reShowMenu() {
 	for (let j=(splitIndex + 1); j < listTwoItems.length; j++) {
@@ -77,5 +80,21 @@ function resizeMenu() {
 
 	for (let item of listTwoItems) {
 		item.classList.add('hidden--js');
+	}
+}
+
+function showSubMenu() {
+	// toggle if click directly
+	listTwo.classList.toggle("show-more-menu--js");
+
+	// if showing and user clicks outside of it, hide again
+	if (listTwo.classList.length == 2) {
+		window.addEventListener("click", function(e) {
+			if (e.target.classList.contains("flexnav-more__item") == false && 
+				e.target.classList.contains("flexnav-more__prompt") == false) {	
+				console.log("this is when it should hide again");
+				listTwo.classList.remove("show-more-menu--js");
+			}	
+		});
 	}
 }
