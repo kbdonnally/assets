@@ -1,0 +1,36 @@
+---
+title: Slab Collapsing Menu
+layout: no-style
+permalink: /slab-menu/
+---
+
+<div class="flexnav-wrapper">
+	<div class="flexnav-main">
+		<div class="flexnav__home-icon"->
+			<a href="{{ site.url }}{{ site.basurl}}/">
+				{% include black-sunburst.svg %}
+			</a>
+		</div> <!-- end home link -->
+
+		<ul class="flexnav-main-grid">
+			{% assign pages = site.pages %}
+			{% for page in pages %}
+			<li class="flexnav__item">
+				<a href="{{ page.url | relative_url}}">{{ page.title | replace: 'and ', '&amp; ' }}</a>
+			</li>
+			{% endfor %}
+			<li class="flexnav__more-menu">
+				<div class="flexnav-more__prompt">More</div>
+				<ul class="flexnav-more__wrapper">
+					{% for page in pages %}
+					{% if page.layout != nil %}
+						<li class="flexnav-more__item"><a href="{{ page.url | relative_url }}">{{ page.title | replace: 'and ', '&amp '}}</a></li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</li>
+		</ul>
+	</div> <!-- end content -->
+</div> <!-- end wrapper -->
+
+<script src="{{ 'assets/js/collapsing-menu-slab.js' | relative_url}}"></script>

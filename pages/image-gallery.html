@@ -1,0 +1,329 @@
+---
+title: Image Gallery
+layout: no-style
+permalink: /image-gallery/
+---
+
+<section class="image-gallery__title-wrapper">
+	<h1 class="image-gallery__page-title">Image Gallery</h1>
+
+
+	<h2 class="image-gallery__links">Links to Sections:</h2>
+
+	<div class="image-gallery-links__wrapper">
+		<h3><a href='#abstract'>Abstract</a></h3>
+		<h3><a href='#pattern'>Pattern</a></h3>
+		<h3><a href='#flowers'>Flowers</a></h3>
+		<h3><a href='#leaves'>Leaves</a></h3>
+		<h3><a href='#wood'>Wood</a></h3>
+		<h3><a href='#hands'>Hands</a></h3>
+		<h3><a href='#portraits'>Portraits</a></h3>
+	</div>
+</section>
+
+{% assign imgdata = site.data.unsplash-images | sort: 'category' %}
+
+<main class="image-gallery-wrapper">
+
+	<hr />
+
+	<!-- Abstract -->
+	<section class="image-gallery__abstract" id="abstract">
+		<h2 class="gallery__section-title">Abstract</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'abstract' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>	
+	</section> <!-- end abstract -->
+
+	<hr />
+
+	<!-- Patterns -->
+	<section class="image-gallery__patterns" id="patterns">
+		<h2 class="gallery__section-title">Patterns</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'pattern' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end patterns -->
+
+	<hr />
+
+	<!-- Flowers -->
+	<section class="image-gallery__flowers" id="flowers">
+		<h2 class="gallery__section-title">Flowers</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'flowers' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end flowers -->
+
+	<hr />
+
+	<!-- Leaves -->
+	<section class="image-gallery__leaves" id="leaves">
+		<h2 class="gallery__section-title">Leaves</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'leaves' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end leaves -->
+	
+	<hr />
+
+	<!-- Wood -->
+	<section class="image-gallery__wood" id="wood">
+		<h2 class="gallery__section-title">Wood</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'wood' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end wood -->
+
+	<hr />
+
+	<!-- Hands -->
+	<section class="image-gallery__hands" id="hands">
+		<h2 class="gallery__section-title">Hands</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'hands' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end hands -->
+
+	<hr />
+
+	<!-- Portraits -->
+	<section class="image-gallery__portraits" id="portraits">
+		<h2 class="gallery__section-title">Portraits</h2>
+		<article class="gallery__section-wrapper">
+		{% for image in imgdata %}
+		{% assign path = 'assets/img/unsplash/' | append: image.title %}
+		{% if image.category == 'portraits' %}
+			<section class="gallery__item">
+				<h4 class="gallery-item__title">{{ image.title }}</h4>
+				<a href="{{ path | relative_url}}">
+					<img class="gallery-item__image"
+						 src="{{ path | relative_url}}"
+						 title="{{ image.title }}"
+						 aria-label="{{ image.title }}" 
+						 height="200" />
+				</a>
+				<ul class="gallery-item__metadata">
+					<li class="gallery-meta__category"><span>Category:</span> {{ image.category }}</li>
+					<li class="gallery-meta__dimensions">
+						<span>Dimensions:</span>
+						<ul class="gallery-dimensions__wrapper">
+							<li class="gallery-dimensions__height"><span>Height:</span> {{ image.height}}px</li>
+							<li class="gallery-dimensions__width"><span>Width:</span> {{ image.width }}px</li>
+						</ul>
+					</li>
+					<li class="gallery-meta__tags-wrapper">
+						<span>Tags:</span>
+					 	<ul class="gallery-meta-tags__list">{% for tag in image.tags %}
+							<li class="gallery-meta-tags__tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+			 		</li>
+				</ul> <!-- end metadata -->
+			</section>
+		{% endif %}
+		{% endfor %}
+		</article>
+	</section> <!-- end portraits -->
+	
+</main> <!-- end gallery wrapper -->
+
+<!--
+Sample data:
+
+categories:
+
+- abstract
+- pattern
+- flowers
+- leaves
+- wood
+- portraits
+- hands
+-->

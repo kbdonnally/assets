@@ -4,25 +4,39 @@
 /* Styles */
 
 // Directories:
-// 1. _layouts --> most general styles, apply to >1 page
-// 2. _nav ------> header, footer styles
-// 3. _pages ----> page-specific styles (docname = page name)
-// 4. _vars -----> Sass variables for colors & font names
+// 1. _syntax ---> syntax highlighting schemes
+// 2. _vars -----> Sass variables for colors & font names
+// 3. _nav ------> header, footer styles
+// 4. _layouts --> most general styles, apply to >1 page
+// 5. _includes -> modules for use on multiple pages
+// 6. _pages ----> page-specific styles (docname = page name)
 
 // Imports:
-// - Purpose: puts together all tiny files into big file
-// - Syntax:  '_dir/_filename.scss' -> @import '_dir/filename'
-// - Order:   least-to-most specific, so cascade flows properly
-//            (NB: vars first b/c can't invoke b/f define)
+// - Purpose: 	   puts together all tiny files into big file
+// - Syntax:  	   '_dir/_filename.scss' -> @import '_dir/filename'
+// - Order:   	   least-to-most specific, so cascade flows properly
+
+// syntax:
+@import '_syntax/ir-black';
 
 // vars:
 @import '_vars/colors';
 @import '_vars/fonts';
+@import '_vars/collapse-menu';
+
+// nav
+// @import '_pages/nav-menu--collapse';
+//@import '_nav/menu-practice-2';
+@import '_nav/menu-practice-3';
 
 // layouts:
-//@import '_layouts/blog-post';
-//@import '_layouts/elements';
-//@import '_layouts/general';
+@import '_layouts/basics-1';
+
+// includes:
+//@import '_includes/nav-menu--top';
 
 // pages:
+@import '_pages/collapsing-menu';
+@import '_pages/flex-nav-practice';
 @import '_pages/magic-kitties';
+@import '_pages/image-gallery';

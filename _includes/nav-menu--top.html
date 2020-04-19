@@ -1,0 +1,13 @@
+<!-- Top nav menu: -->
+<nav class="nav-menu-wrapper--top">
+	<div class="nav-list__item--home"><a href="{{ site.url }}{{ site.baseurl }}"><!--img src="{{ 'assets/img/svg/sunburst-black.svg' | relative_url }}" /--> {% include black-sunburst.svg %}</a></div>
+	<ul class="nav-menu__list--top">
+	{% for page in site.pages %}
+	{% if page.title %}
+		<li class="nav-list__item--top">
+			<a class="nav-item__link--top" href="{{ page.url | relative_url}}">{{ page.title }}</a>
+		</li>
+	{% endif %}
+	{% endfor %}
+	</ul>
+</nav>

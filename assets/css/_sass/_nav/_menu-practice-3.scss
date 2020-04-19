@@ -1,0 +1,110 @@
+body {
+	margin: 0;
+}
+
+.nav-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 60px;
+	background-color: lavender;
+}
+
+.nav-inner-wrapper {
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	width: 100vw;
+	max-width: 3000px; // 'main' has max of 1000
+	padding: 0;
+	margin: 0;
+}
+
+.nav__home-link {
+
+}
+
+// container for List 1, More prompt, & List 2
+.nav__list-holder {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: grid;
+	grid-template-areas: 'list-1 more'
+						 '...... list-2';
+	grid-template-columns: 1fr 150px;
+}
+
+/* List 1: */
+
+[class*='nav__list-'] {
+	padding-left: 0;
+	margin: 0;
+}
+
+.nav__list-1 {
+	grid-area: list-1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 60px;
+	width: 75vw;
+	padding-right: 1rem;
+	white-space: nowrap;
+	&:last-of-type {
+		padding-right: 1rem;
+	}
+}
+
+.nav-list__item {
+	padding-left: 1rem;
+	&::before {
+		display: none;
+	}
+}
+
+/* More prompt: */
+
+// ul
+.nav__more-prompt {
+	grid-area: more;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid purple;
+	cursor: pointer;
+	&:hover {
+		background-color: lavender;
+	}
+	li {
+		margin: 0 auto;
+		line-height: 1;
+		cursor: pointer;
+		&::before {
+			display: none;
+		}
+	}
+}
+
+/* List 2: */
+
+.nav__list-2 {
+	grid-area: list-2;
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 300px;
+	transform: translate(-20px, 0);
+}
+
+.nav-list__item {
+	&::before {
+		display: none;
+	}	
+
+}

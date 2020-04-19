@@ -1,0 +1,40 @@
+---
+title: Menu Practice 2
+layout: no-style
+permalink: /menu-practice-2/
+---
+
+<nav class="nav-wrapper">
+	<main class="nav-inner-wrapper">
+		<!-- item 1 in flex -->
+		<a class="nav__home-link" href="{{ site.url }}{{ site.baseurl }}">
+			{% include black-sunburst.svg %}
+		</a>
+		<!-- item 2 in flex -->
+		<section class="nav__list-holder">
+			<!-- list one: -->
+			<ul class="nav__list-1">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ forloop.index }}. {{ page.title }}</a></li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+			<!-- more prompt -->
+			<ul class="nav__more-prompt">
+				<li>More</li>
+			</ul>
+			<!-- list 2: -->
+			<ul class="nav__list-2">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li class="nav-list__item"><a href="{{ page.url | relative_url}}">{{ forloop.index }}.{{ page.title }}</a></li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+
+		</section>
+	</main>
+</nav>
+
+<script src="{{ 'assets/js/menu-practice-3.js' | relative_url}}"></script>

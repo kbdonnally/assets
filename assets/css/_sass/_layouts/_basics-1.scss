@@ -1,0 +1,182 @@
+/* To go with default.html */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $futura;
+	@media screen and (min-width: 600px) {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
+
+main {
+	position: relative;
+	padding: 3rem 4.167%;
+	max-width: 1000px;
+	margin: 0 auto;
+	@media screen and (min-width: 450px) {
+		padding: 3rem 8.33%;
+	}	
+}
+
+// --- Headers --- //
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	line-height: 1
+}
+
+h1 {
+	font-size: 2.5rem; // total height: 
+	padding: .25em 0;
+	@media screen and (min-width: 450px) {
+		font-size: 3rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 4rem; // total height: 6rem
+	}
+}
+
+h2 {
+	font-size: 1.875rem; // total height: 3.75rem
+	padding: .25em 0;
+	@media screen and (min-width: 450px) {
+		font-size: 2.5rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 3rem; // total height: 6rem
+	}
+
+}
+
+h3 {
+	font-size: 1.5rem; // total height: 2.5175rem
+	padding: calc(.875rem / 2) 0;
+	@media screen and (min-width: 450px) {
+		font-size: 1.5rem; // total height: 4.5rem
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 1.625rem; // total height: 
+	}
+}
+
+h4 {
+	font-size: 1.25rem;
+	padding: calc(.75rem / 2) 0;
+}
+
+// --- Paragraphs --- //
+
+p {
+}
+
+em {
+
+}
+
+strong {
+
+}
+
+// --- Lists --- //
+
+ol {
+	list-style: none;
+	counter-reset: my-counter;
+	padding-left: 2rem;
+	li {
+		counter-increment: my-counter;
+		&::before {
+			content: counter(my-counter) '. ';
+			font-weight: 700;
+			color: $halfgray;
+		}
+	}
+}
+
+ul {
+	list-style: none;
+	padding-left: calc(2rem + 19px);
+	li {
+		position: relative;
+		&::before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: -16px;
+			top: 50%;
+			transform: translate(0,-50%);
+			height: 7px;
+			width: 7px;
+			border-radius: 50%;
+			background-color: $halfgray;
+		}
+	}
+
+}
+
+li {
+
+}
+
+// --- Linked tags --- //
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: $halfgray;
+	border-bottom: 1px solid $halfgray;
+	transition: color .2s, border-bottom .2s;
+	&:hover, &:focus {
+		color: black;
+		border-bottom: 1px solid black;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+// --- Line break --- //
+
+hr {
+	color: $halfgray;
+}
+
+// --- Code: --- //
+
+pre {
+	//font-size: 14px;
+	font-family: $inconsolata;
+}
+
+code {
+	padding: 1rem !important;
+//	font-size: 14px;
+	font-family: $inconsolata;
+}
+
+// --- Blockquote --- //
+
+blockquote {
+	color: $halfgray;
+	margin: 1em 0;
+	padding: 0 2em;
+	border-left: 1px solid black;
+}
+
+/*
+
+### Semantic Tags:
+
+1. `<header></header>`
+2. `<nav></nav>`
+3. `<main></main>`
+4. `<aside></aside>`
+5. `<footer></footer>`
+6. `<section></section>`
+7. `<article></article>`
+*/
